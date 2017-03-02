@@ -1,0 +1,72 @@
+{
+  "name": "react-starter-kit",
+  "version": "0.0.0",
+  "description": "A simple boilerplate for starting new React projects.",
+  "scripts": {
+    "dev": "NODE_ENV=development ./node_modules/.bin/webpack-dev-server --config ./config/webpack.dev.js",
+    "prebuild": "rm -rf ./build",
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack --config ./config/webpack.prod.js",
+    "lint": "./node_modules/.bin/eslint -c .eslintrc.js ./src ./config",
+    "prod": "./node_modules/.bin/pushstate-server ./build 9000"
+  },
+  "engines": {
+    "node": "^6.x",
+    "npm": "^3.x"
+  },
+  "keywords": [
+    "react",
+    "react-router",
+    "babel",
+    "webpack",
+    "eslint"
+  ],
+  "author": "Xiaofan Wu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiaofan2406/react-starter-kit"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "jss": "^6.3.0",
+    "jss-preset-default": "^1.3.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-jss": "^5.3.0",
+    "react-router-dom": "next"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.3.2",
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.23.0",
+    "babel-plugin-transform-react-jsx-self": "^6.22.0",
+    "babel-plugin-transform-react-jsx-source": "^6.22.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.3.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "css-loader": "^0.26.2",
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-import-resolver-webpack": "^0.8.1",
+    "eslint-loader": "^1.6.3",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
+    "extract-text-webpack-plugin": "^2.0.0",
+    "file-loader": "^0.10.0",
+    "html-webpack-plugin": "^2.28.0",
+    "json-loader": "^0.5.4",
+    "pushstate-server": "^2.2.2",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "style-loader": "^0.13.2",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1",
+    "webpack-manifest-plugin": "^1.1.0"
+  }
+}
