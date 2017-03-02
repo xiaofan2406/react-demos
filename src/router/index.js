@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
+import SetState from 'components/SetState';
 import Layout from 'components/Layout';
 import Home from './Home';
 import About from './About';
@@ -16,6 +17,11 @@ export const routes = [
     path: '/about',
     name: 'About',
     component: About
+  },
+  {
+    path: '/setstate',
+    name: 'setState Demo',
+    component: SetState
   }
 ];
 
