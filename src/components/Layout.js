@@ -2,6 +2,7 @@ import React from 'react';
 import injectSheet, { fontFamily, fontSize } from 'styles';
 import 'styles/reset.css';
 import 'styles/animation.css';
+import 'styles/style.css';
 
 import Header from './Header';
 

@@ -9,7 +9,7 @@ const sheet = {
       boxShadow: '0 1px 6px rgba(0,0,0,.2)'
     }
   },
-  title: {
+  description: {
     borderBottom: '1px solid #e9e9e9',
     padding: '12px'
   },
@@ -25,16 +25,18 @@ const sheet = {
   }
 };
 
-function Demo({ sheet: { classes }, children, description, title }) {
+function Demo({ sheet: { classes }, first, second, firstNote, secondNote, description }) {
   return (
     <div className={classes.demo}>
-      {title && <ReactMarkdown className={classes.title} source={title} />}
+      {description && <ReactMarkdown className={classes.description} source={description} />}
       <div className={classes.content}>
         <div className={classes.half}>
-          <ReactMarkdown source={description} />
+          {first}
+          {firstNote}
         </div>
         <div className={classes.half}>
-          {children}
+          {second}
+          {secondNote}
         </div>
       </div>
     </div>
@@ -43,9 +45,15 @@ function Demo({ sheet: { classes }, children, description, title }) {
 
 Demo.propTypes = {
   sheet: React.PropTypes.object.isRequired,
-  children: React.PropTypes.node.isRequired,
+  first: React.PropTypes.node.isRequired,
+  second: React.PropTypes.node.isRequired,
   description: React.PropTypes.string.isRequired,
-  title: React.PropTypes.string.isRequired
+  firstNote: React.PropTypes.string,
+  secondNote: React.PropTypes.string
+};
+Demo.defaultProps = {
+  firstNote: null,
+  secondNote: null
 };
 
 export default injectSheet(sheet)(Demo);
