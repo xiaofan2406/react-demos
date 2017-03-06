@@ -1,5 +1,5 @@
 import React from 'react';
-import injectSheet, { primaryColor, headerHeight } from 'styles';
+import injectSheet, { primaryColor, headerHeight, breath } from 'styles';
 import SmartLink from 'widgets/SmartLink';
 
 import logo from './logo.svg';
@@ -12,18 +12,20 @@ const sheet = {
   brand: {
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'center',
     height: headerHeight,
     backgroundColor: primaryColor
   },
   logo: {
     animation: 'spin infinite 10s linear',
-    height: '34px'
+    height: '96px'
   },
   title: {
     animation: 'fadeIn 2s ease',
     fontSize: '24px'
   },
   nav: {
+    marginTop: breath,
     display: 'flex',
     flexDirection: 'column'
   },
@@ -32,6 +34,7 @@ const sheet = {
     textDecoration: 'none',
     padding: '0.5em 1em',
     display: 'inline-block',
+    color: 'inherit',
     '&:hover': {
       color: primaryColor
     }
@@ -46,7 +49,6 @@ function SideNav({ sheet: { classes } }) {
     <div className={classes.sideNav}>
       <div className={classes.brand}>
         <img src={logo} className={classes.logo} alt="logo" />
-        <span className={classes.title}>React Demos</span>
       </div>
       <div className={classes.nav}>
         {routes.map(route => (

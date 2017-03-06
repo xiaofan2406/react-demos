@@ -8,8 +8,8 @@ import Home from './Home';
 export const routes = [
   {
     path: '/',
-    name: 'Home',
-    title: () => <div>React Demos</div>,
+    name: 'Get Started',
+    title: () => <div>Get Started</div>,
     exact: true,
     component: Home
   },

@@ -1,5 +1,5 @@
 import React from 'react';
-import injectSheet, { primaryColor, headerHeight } from 'styles';
+import injectSheet, { primaryColor, headerHeight, spacing } from 'styles';
 import { Route } from 'react-router-dom';
 
 import { routes } from '../router';
@@ -8,7 +8,7 @@ const sheet = {
   header: {
     backgroundColor: primaryColor,
     height: headerHeight,
-    padding: '12px',
+    padding: spacing,
     display: 'flex',
     alignItems: 'center'
   },

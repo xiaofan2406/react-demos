@@ -1,5 +1,5 @@
 import React from 'react';
-import injectSheet, { fontFamily, fontSize } from 'styles';
+import injectSheet, { fontFamily, fontSize, spacing } from 'styles';
 import 'styles/reset.css';
 import 'styles/animation.css';
 import 'styles/style.css';
@@ -13,21 +13,21 @@ const sheet = {
     fontSize,
     display: 'flex',
     minHeight: '100vh',
-    color: 'rgba(0,0,0,.8)'
+    color: 'rgba(0,0,0,.8)',
+    lineHeight: spacing
   },
   main: {
     width: '100%'
   },
   content: {
     width: '760px',
-    minWidth: '560px',
-    padding: '1em',
-    margin: 'auto'
+    minWidth: '576px',
+    padding: spacing
   },
   side: {
-    width: '220px',
-    minWidth: '220px',
-    boxShadow: 'rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px',
+    width: '216px',
+    minWidth: '216px',
+    boxShadow: 'rgba(0, 0, 0, 0.227451) 0px 3px 10px',
     zIndex: 10
   }
 };

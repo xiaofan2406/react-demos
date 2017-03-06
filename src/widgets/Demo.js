@@ -1,5 +1,5 @@
 import React from 'react';
-import injectSheet from 'styles';
+import injectSheet, { breath, spacing } from 'styles';
 import ReactMarkdown from 'react-markdown';
 
 const sheet = {
@@ -12,13 +12,13 @@ const sheet = {
   },
   description: {
     borderBottom: '1px solid #e9e9e9',
-    padding: '12px'
+    padding: breath
   },
   content: {
     display: 'flex'
   },
   half: {
-    padding: '12px',
+    padding: breath,
     flex: 1,
     '&:first-child': {
       borderRight: '1px solid #e9e9e9'
@@ -28,13 +28,13 @@ const sheet = {
     alignItems: 'center'
   },
   title: {
-    marginBottom: '20px',
+    marginBottom: spacing,
     color: '#9c9c9c',
     display: 'inline-block',
     borderBottom: '1px solid #e9e9e9'
   },
   note: {
-    marginTop: '20px'
+    marginTop: spacing
   }
 };
 
