@@ -1,14 +1,16 @@
 import React from 'react';
 
-class SetStateGood extends React.PureComponent {
+class SetStateGood extends React.Component {
   state = {
     isRock: false
   };
 
   rock = () => {
-    this.setState({
-      isRock: true
-    });
+    if (!this.state.isRock) {
+      this.setState({
+        isRock: true
+      });
+    }
   }
 
   render() {
@@ -16,7 +18,7 @@ class SetStateGood extends React.PureComponent {
     const { isRock } = this.state;
     return (
       <div>
-        <div>React rocks?: {String(isRock)}</div>
+        <div>React rocks?: {isRock ? 'Yes :)' : 'No :('}</div>
         <button onClick={this.rock}>Rock!</button>
       </div>
     );

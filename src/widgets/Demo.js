@@ -28,10 +28,13 @@ const sheet = {
     alignItems: 'center'
   },
   title: {
-    marginBottom: '12px',
+    marginBottom: '20px',
     color: '#9c9c9c',
     display: 'inline-block',
     borderBottom: '1px solid #e9e9e9'
+  },
+  note: {
+    marginTop: '20px'
   }
 };
 
@@ -45,12 +48,12 @@ function Demo({
         <div className={classes.half}>
           {firstTitle && <span className={classes.title}>{firstTitle}</span>}
           {first}
-          {firstNote && <span className={classes.title}>{firstNote}</span>}
+          {firstNote && <ReactMarkdown className={classes.note} source={firstNote} />}
         </div>
         <div className={classes.half}>
           {secondTitle && <span className={classes.title}>{secondTitle}</span>}
           {second}
-          {secondNote && <span className={classes.title}>{secondNote}</span>}
+          {secondNote && <ReactMarkdown className={classes.note} source={secondNote} />}
         </div>
       </div>
     </div>

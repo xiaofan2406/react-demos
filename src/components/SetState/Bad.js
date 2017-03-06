@@ -6,7 +6,7 @@ class SetStateBad extends React.Component {
     isRock: false
   };
 
-  makeCute = () => {
+  rock = () => {
     this.setState({
       isRock: true
     });
@@ -17,8 +17,8 @@ class SetStateBad extends React.Component {
     const { isRock } = this.state;
     return (
       <div>
-        <div>React rocks?: {String(isRock)}</div>
-        <button onClick={this.makeCute}>Rock!</button>
+        <div>React rocks?: {isRock ? 'Yes :)' : 'No :('}</div>
+        <button onClick={this.rock}>Rock!</button>
       </div>
     );
   }
