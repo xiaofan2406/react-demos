@@ -1,67 +1,33 @@
 import React from 'react';
 import injectSheet, { primaryColor, headerHeight } from 'styles';
-import SmartLink from 'widgets/SmartLink';
+import { Route } from 'react-router-dom';
 
-import logo from './logo.svg';
 import { routes } from '../router';
 
 const sheet = {
   header: {
+    backgroundColor: primaryColor,
     height: headerHeight,
-    backgroundColor: '#242729',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between'
-  },
-  brand: {
+    padding: '12px',
     display: 'flex',
     alignItems: 'center'
   },
-  logo: {
-    animation: 'spin infinite 10s linear',
-    height: '34px'
-  },
   title: {
-    animation: 'fadeIn 2s ease',
-    fontSize: '18px',
-    color: '#fff'
-  },
-  headerNav: {
-    height: headerHeight
-  },
-  link: {
-    color: '#fff',
-    textDecoration: 'none',
-    padding: '0 0.5em',
-    display: 'inline-block',
-    lineHeight: headerHeight,
-    height: headerHeight,
-    '&:hover': {
-      backgroundColor: '#3b4045'
-    }
-  },
-  linkActive: {
-    borderBottom: `2px solid ${primaryColor}`
+    fontSize: '36px'
   }
 };
 
 function Header({ sheet: { classes } }) {
   return (
     <div className={classes.header}>
-      <div className={classes.brand}>
-        <img src={logo} className={classes.logo} alt="logo" />
-        <span className={classes.title}>React Starter Kit</span>
-      </div>
-      <div className={classes.headerNav}>
+      <div className={classes.title}>
         {routes.map(route => (
-          <SmartLink
-            className={classes.link}
-            activeClassName={classes.linkActive}
+          <Route
             key={route.path}
-            to={route.path}
-          >
-            {route.name}
-          </SmartLink>
+            path={route.path}
+            exact={route.exact}
+            component={route.title}
+          />
         ))}
       </div>
     </div>

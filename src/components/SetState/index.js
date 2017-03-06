@@ -15,7 +15,7 @@ function SetStateDemo() {
       description={[
         'In `React.Component`, `this.setState` will trigger a re-render everytime, ',
         'regardless of whether state has changed or not.',
-        'Therefore, it is important to make sure only call `this.setState` when necessary.',
+        'Therefore, it is important to make sure only call `this.setState` when necessary. ',
         '(Open console to check the difference with this demo)'
       ].join('')}
     />

@@ -1,5 +1,5 @@
 {
-  "name": "react-starter-kit",
+  "name": "react-demos",
   "version": "0.0.0",
   "description": "A simple boilerplate for starting new React projects.",
   "scripts": {
@@ -23,7 +23,7 @@
   "author": "Xiaofan Wu",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xiaofan2406/react-starter-kit"
+    "url": "https://github.com/xiaofan2406/react-demos"
   },
   "license": "ISC",
   "dependencies": {

@@ -11,4 +11,4 @@ export const fontFamily = '"Roboto", sans-serif';
 export const fontSize = '16px';
 
 export const primaryColor = '#00bcd4';
-export const headerHeight = '42px';
+export const headerHeight = '120px';

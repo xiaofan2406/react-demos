@@ -4,23 +4,19 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import SetState from 'components/SetState';
 import Layout from 'components/Layout';
 import Home from './Home';
-import About from './About';
 
 export const routes = [
   {
     path: '/',
     name: 'Home',
+    title: () => <div>React Demos</div>,
     exact: true,
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    component: About
-  },
-  {
     path: '/setstate',
     name: 'setState Demo',
+    title: () => <div>setState demo</div>,
     component: SetState
   }
 ];
