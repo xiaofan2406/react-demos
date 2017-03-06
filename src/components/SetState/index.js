@@ -8,6 +8,8 @@ function SetStateDemo() {
     <Demo
       first={<Bad />}
       second={<Good />}
+      firstTitle="Bad example"
+      secondTitle="Good example"
       description={[
         'In `React.Component`, `this.setState` will trigger a re-render everytime, ',
         'regardless of whether state has changed or not'
