@@ -6,6 +6,17 @@ class SetStateBad extends React.Component {
     isRock: false
   };
 
+  startRocking = () => {
+    this.setState({
+      isRock: true
+    });
+  }
+  stopRocking = () => {
+    this.setState({
+      isRock: false
+    });
+  }
+
   rock = () => {
     this.setState({
       isRock: true
@@ -18,7 +29,8 @@ class SetStateBad extends React.Component {
     return (
       <div>
         <div>React rocks?: {isRock ? 'Yes :)' : 'No :('}</div>
-        <button onClick={this.rock}>Rock!</button>
+        <button onClick={this.startRocking}>Start rocking!</button>
+        <button onClick={this.stopRocking}>Stop rocking!</button>
       </div>
     );
   }

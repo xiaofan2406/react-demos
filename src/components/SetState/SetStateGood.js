@@ -5,10 +5,17 @@ class SetStateGood extends React.Component {
     isRock: false
   };
 
-  rock = () => {
+  startRocking = () => {
     if (!this.state.isRock) {
       this.setState({
         isRock: true
+      });
+    }
+  }
+  stopRocking = () => {
+    if (this.state.isRock) {
+      this.setState({
+        isRock: false
       });
     }
   }
@@ -19,7 +26,8 @@ class SetStateGood extends React.Component {
     return (
       <div>
         <div>React rocks?: {isRock ? 'Yes :)' : 'No :('}</div>
-        <button onClick={this.rock}>Rock!</button>
+        <button onClick={this.startRocking}>Start rocking!</button>
+        <button onClick={this.stopRocking}>Stop rocking!</button>
       </div>
     );
   }

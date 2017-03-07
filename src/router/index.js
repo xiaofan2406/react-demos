@@ -9,14 +9,14 @@ export const routes = [
   {
     path: '/',
     name: 'Get Started',
-    title: () => <div>Get Started</div>,
+    title: () => <span>Get Started</span>,
     exact: true,
     component: Home
   },
   {
     path: '/setstate',
-    name: 'setState Demo',
-    title: () => <div>setState demo</div>,
+    name: 'setState',
+    title: () => <span>setState</span>,
     component: SetState
   }
 ];
