@@ -39,7 +39,7 @@ const sheet = {
 };
 
 function Demo({
-  sheet: { classes }, first, second, firstTitle, firstNote, secondTitle, secondNote, description
+  classes, first, second, firstTitle, firstNote, secondTitle, secondNote, description
 }) {
   return (
     <div className={classes.demo}>
@@ -61,7 +61,7 @@ function Demo({
 }
 
 Demo.propTypes = {
-  sheet: React.PropTypes.object.isRequired,
+  classes: React.PropTypes.object.isRequired,
   first: React.PropTypes.node.isRequired,
   second: React.PropTypes.node.isRequired,
   description: React.PropTypes.string.isRequired,

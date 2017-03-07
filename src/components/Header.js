@@ -17,7 +17,7 @@ const sheet = {
   }
 };
 
-function Header({ sheet: { classes } }) {
+function Header({ classes }) {
   return (
     <div className={classes.header}>
       <div className={classes.title}>
@@ -35,7 +35,7 @@ function Header({ sheet: { classes } }) {
 }
 
 Header.propTypes = {
-  sheet: React.PropTypes.object.isRequired
+  classes: React.PropTypes.object.isRequired
 };
 
 export default injectSheet(sheet)(Header);

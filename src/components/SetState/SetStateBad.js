@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Button from 'widgets/Button';
 
 class SetStateBad extends React.Component {
   state = {
@@ -28,9 +28,9 @@ class SetStateBad extends React.Component {
     const { isRock } = this.state;
     return (
       <div>
-        <div>React rocks?: {isRock ? 'Yes :)' : 'No :('}</div>
-        <button onClick={this.startRocking}>Start rocking!</button>
-        <button onClick={this.stopRocking}>Stop rocking!</button>
+        <div>React rocks?: <strong>{isRock ? 'Yes :)' : 'No :('}</strong></div>
+        <Button onClick={this.startRocking} text="Start rocking!" />
+        <Button onClick={this.stopRocking} text="Stop rocking!" />
       </div>
     );
   }

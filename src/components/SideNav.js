@@ -44,7 +44,7 @@ const sheet = {
   }
 };
 
-function SideNav({ sheet: { classes } }) {
+function SideNav({ classes }) {
   return (
     <div className={classes.sideNav}>
       <div className={classes.brand}>
@@ -67,7 +67,7 @@ function SideNav({ sheet: { classes } }) {
 }
 
 SideNav.propTypes = {
-  sheet: React.PropTypes.object.isRequired
+  classes: React.PropTypes.object.isRequired
 };
 
 export default injectSheet(sheet)(SideNav);

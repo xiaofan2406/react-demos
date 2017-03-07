@@ -13,6 +13,5 @@ export const fontSize = '16px';
 export const primaryColor = '#00bcd4';
 export const headerHeight = '120px';
 
-
 export const spacing = '24px';
 export const breath = '12px';

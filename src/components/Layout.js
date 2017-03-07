@@ -32,7 +32,7 @@ const sheet = {
   }
 };
 
-function Layout({ sheet: { classes }, children }) {
+function Layout({ classes, children }) {
   return (
     <div className={classes.layout}>
       <div className={classes.side}>
@@ -49,7 +49,7 @@ function Layout({ sheet: { classes }, children }) {
 }
 
 Layout.propTypes = {
-  sheet: React.PropTypes.object.isRequired,
+  classes: React.PropTypes.object.isRequired,
   children: React.PropTypes.node.isRequired
 };
 
