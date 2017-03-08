@@ -9,8 +9,11 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   entry: [
     'react-hot-loader/patch',
+    `webpack-dev-server/client?http://${localIp}:8080`,
+    'webpack/hot/only-dev-server',
     `${paths.srcDir}/index.js`
   ],
+  context: paths.srcDir,
   resolve: common.resolve,
   output: {
     // For dev, `path` and `filename` are not important because of using webpack-dev-server
@@ -50,7 +53,8 @@ module.exports = {
       favicon: `${paths.srcDir}/favicon.ico`
     }),
     new webpack.DefinePlugin({ 'process.env.NODE_ENV': '"development"' }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin()
   ],
   devServer: {
     compress: true,

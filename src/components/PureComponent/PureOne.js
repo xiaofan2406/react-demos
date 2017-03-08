@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'widgets/Button';
 
-class SetStateBad extends React.Component {
+class PureOne extends React.PureComponent {
   state = {
     isRocking: false
   };
@@ -18,7 +18,7 @@ class SetStateBad extends React.Component {
   }
 
   render() {
-    console.log('render SetStateBad');
+    console.log('render PureOne');
     const { isRocking } = this.state;
     return (
       <div>
@@ -31,4 +31,4 @@ class SetStateBad extends React.Component {
 }
 
 
-export default SetStateBad;
+export default PureOne;

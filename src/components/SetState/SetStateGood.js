@@ -3,30 +3,30 @@ import Button from 'widgets/Button';
 
 class SetStateGood extends React.Component {
   state = {
-    isRock: false
+    isRocking: false
   };
 
   startRocking = () => {
-    if (!this.state.isRock) {
+    if (!this.state.isRocking) {
       this.setState({
-        isRock: true
+        isRocking: true
       });
     }
   }
   stopRocking = () => {
-    if (this.state.isRock) {
+    if (this.state.isRocking) {
       this.setState({
-        isRock: false
+        isRocking: false
       });
     }
   }
 
   render() {
     console.log('render SetStateGood');
-    const { isRock } = this.state;
+    const { isRocking } = this.state;
     return (
       <div>
-        <div>React rocks?: <strong>{isRock ? 'Yes :)' : 'No :('}</strong></div>
+        <div>React rocks?: <strong>{isRocking ? 'Yes :)' : 'No :('}</strong></div>
         <Button onClick={this.startRocking} text="Start rocking!" />
         <Button onClick={this.stopRocking} text="Stop rocking!" />
       </div>

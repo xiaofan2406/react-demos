@@ -1,10 +1,25 @@
 import React from 'react';
 import Button from 'widgets/Button';
 
-class SetStateBad extends React.Component {
+
+class PureTwo extends React.Component {
   state = {
     isRocking: false
   };
+
+  shouldComponentUpdate(nextProps, nextState) {
+    for (const propKey in nextProps) {
+      if (nextProps[propKey] !== this.props[propKey]) {
+        return true;
+      }
+    }
+    for (const stateKey in nextState) {
+      if (nextState[stateKey] !== this.state[stateKey]) {
+        return true;
+      }
+    }
+    return false;
+  }
 
   startRocking = () => {
     this.setState({
@@ -18,7 +33,7 @@ class SetStateBad extends React.Component {
   }
 
   render() {
-    console.log('render SetStateBad');
+    console.log('render PurTwo');
     const { isRocking } = this.state;
     return (
       <div>
@@ -31,4 +46,4 @@ class SetStateBad extends React.Component {
 }
 
 
-export default SetStateBad;
+export default PureTwo;

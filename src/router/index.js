@@ -1,8 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import SetState from 'components/SetState';
 import Layout from 'components/Layout';
+import SetState from 'components/SetState';
+import PureComponent from 'components/PureComponent';
+import ChildComponent from 'components/ChildComponent';
 import Home from './Home';
 
 export const routes = [
@@ -18,6 +20,18 @@ export const routes = [
     name: 'setState',
     title: () => <span>setState</span>,
     component: SetState
+  },
+  {
+    path: '/purecomponent',
+    name: 'PureComponent',
+    title: () => <span>PureComponent</span>,
+    component: PureComponent
+  },
+  {
+    path: '/childcomponent',
+    name: 'Component Composition',
+    title: () => <span>Component Composition</span>,
+    component: ChildComponent
   }
 ];
 
